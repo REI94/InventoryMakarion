@@ -15,31 +15,45 @@
   <body style="background-color: rgb(240, 224, 247)">
     <h1 style="padding-top: 20px; padding-bottom: 10px; text-align: center">Registro</h1>
     <!--Planilla de registro-->
-    <div class="container formularios">
+    <div class="container col-md-6 formularios" style="margin-bottom: 9%">
       <form>
         <div class="form-row">
-          <div class="col-md-4 mb-3">
+          <div class="col">
             <label for="validationServer01">Nombre</label>
             <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Nombre" required>          
-          </div>
-          <div class="col-md-4 mb-3">
-            <label for="validationServer02">Apellido</label>
-            <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Apellido" required>          
-          </div>
-          <div class="col-md-4 mb-3">
-            <label for="validationServer03">Cédula de indentidad</label>
+          </div>                  
+        </div>
+        <div class="form-row" style="padding-top: 12px">          
+          <div class="col">
+            <label for="validationServer02">Apellidos</label>
+            <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Apellidos" required>          
+          </div>                
+        </div>
+        <div class="form-row" style="padding-top: 12px">
+          <label for="validationServer03" style="padding-left: 5px">Cédula de indentidad</label>
+        </div>          
+        <div class="form-row">
+          <div class="form-group col-md-2">             
+            <select id="inputState" class="form-control">
+              <option selected>V</option>
+              <option>E</option>
+            </select>
+          </div>            
+          <div class="form-group col-md-10">           
             <input type="text" class="form-control is-invalid" id="validationServer02" placeholder="Cédula de identidad" required>          
-          </div>        
+          </div>                
         </div>
         <div class="form-row">
-          <div class="col-md-4 mb-3">
+          <div class="col">
             <label for="validationServer04">Correo electrónico</label>
             <input type="text" class="form-control is-invalid" id="validationServer02" placeholder="Correo electrónico" required>          
             <div class="invalid-feedback">
               Correo eletrónico inválido.
             </div>
-          </div>
-          <div class="col-md-4 mb-3">
+          </div>                  
+        </div>
+        <div class="form-row" style="padding-top: 12px">          
+          <div class="col">
             <label for="validationServer05">Contraseña</label>
             <input type="text" class="form-control is-invalid" id="validationServer02" placeholder="Contraseña" required>          
             <div class="invalid-feedback">
@@ -47,7 +61,7 @@
             </div>
           </div>        
         </div>
-        <div class="form-group">
+        <div class="form-group" style="padding-top: 20px">
           <div class="form-check">
             <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
             <label class="form-check-label" for="invalidCheck3">
@@ -58,7 +72,11 @@
             </div>
           </div>
         </div>
-        <button class="btn btn-primary" type="submit">Registrarme</button>
+        <div class="container" style="padding-top: 10px; padding-bottom: 10px">
+          <div class="row justify-content-center">            
+            <button class="btn btn-outline-success" type="submit">Registrarme</button>                        
+          </div>          
+        </div>        
       </form>
     </div>   
     
