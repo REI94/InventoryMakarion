@@ -82,3 +82,46 @@
 	box-shadow: 0 0 3px #cfcfcf, 0 0 4px #cacaca
 }
 /*--------------------------------------------------------------*/
+
+/*-------------------------Botones outline purpura--------------*/
+.btn-outline-purple{
+	color: #563d7c;
+	border-color: #563d7c
+}
+
+.btn-outline-purple:hover{
+	background: #563d7c;
+	color: rgb(247, 247, 247);
+	border-color: rgb(247, 247, 247);
+}
+/*--------------------------------------------------------------*/
+
+/*-------------------------Botones outline purpura--------------*/
+.cardShadow{
+	box-shadow: 0 0 10px #cfcfcf62, 0 0 10px #cacaca60
+}
+/*--------------------------------------------------------------*/
+
+.precioDescuento{
+	color: rgb(29, 177, 29);
+	font-size: 18px
+}
+
+.precioAntDescuento{
+	color: #858585;
+	text-decoration: line-through
+}
+
+.colorFranjas1{
+	/*background-color: rgb(241, 253, 212);*/
+	/*background-color: rgb(252, 236, 211);*/
+	background-color: rgb(255, 247, 238);
+	padding-top: 20px
+}
+
+.colorFranjas2{
+	/*background-color: rgb(211, 233, 252);*/
+	/*background-color: rgb(240, 248, 255);*/
+	background-color: rgb(240, 224, 247);
+	padding-top: 20px
+}
