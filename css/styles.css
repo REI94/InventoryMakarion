@@ -125,3 +125,9 @@
 	background-color: rgb(240, 224, 247);
 	padding-top: 20px
 }
+
+.botonEditar{
+	position: absolute;
+	border-color: transparent;	
+	font-size: 20px
+}
