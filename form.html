@@ -15,38 +15,56 @@
   <body style="background-color: rgb(240, 224, 247)">
     <h1 style="padding-top: 20px; padding-bottom: 10px; text-align: center">Registro</h1>
     <!--Planilla de registro-->
-    <div class="container col-md-6 formularios" style="margin-bottom: 9%">
+    <div class="container col-md-5 formularios" style="margin-bottom: 9%">
       <form>
         <div class="form-row">
-          <div class="col">
+          <div class="form-group col-md-6">
             <label for="validationServer01">Nombre</label>
-            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Nombre" required>          
-          </div>                  
-        </div>
-        <div class="form-row" style="padding-top: 12px">          
-          <div class="col">
-            <label for="validationServer02">Apellidos</label>
-            <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Apellidos" required>          
+            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="" required>          
+          </div>                        
+          <div class="form-group col-md-6">
+            <label for="validationServer02">Apellido</label>
+            <input type="text" class="form-control is-valid" id="validationServer02" placeholder="" required>          
           </div>                
         </div>
-        <div class="form-row" style="padding-top: 12px">
-          <label for="validationServer03" style="padding-left: 5px">Cédula de indentidad</label>
+        <div class="form-row">
+          <label for="validationServer03" style="padding-left: 5px">Documento de identidad</label>
         </div>          
         <div class="form-row">
-          <div class="form-group col-md-2">             
+          <div class="form-group col-md-3">             
             <select id="inputState" class="form-control">
               <option selected>V</option>
               <option>E</option>
+              <option>P</option>
+              <option>J</option>
+              <option>G</option>
+              <option>R - Firma personal</option>
             </select>
           </div>            
-          <div class="form-group col-md-10">           
-            <input type="text" class="form-control is-invalid" id="validationServer02" placeholder="Cédula de identidad" required>          
+          <div class="form-group col-md-9">           
+            <input type="text" class="form-control is-invalid" id="validationServer02" placeholder="" required>          
           </div>                
         </div>
         <div class="form-row">
+          <div class="form-group col-md-3">
+            <label for="validationServer02">Edad</label>             
+            <input type="text" class="form-control is-invalid" id="validationServer02" placeholder="" required>
+          </div>            
+          <div class="form-group col-md-9">
+            <label for="validationServer02">Teléfono</label>           
+            <input type="text" class="form-control is-invalid" id="validationServer02" placeholder="" required>          
+          </div>                
+        </div>
+        <div class="form-row">
+            <div class="col">
+              <label for="validationServer01">Dirección</label>
+              <input type="text" class="form-control is-valid" id="validationServer01" placeholder="" required>          
+            </div>                  
+          </div>
+        <div class="form-row" style="padding-top: 12px">
           <div class="col">
             <label for="validationServer04">Correo electrónico</label>
-            <input type="text" class="form-control is-invalid" id="validationServer02" placeholder="Correo electrónico" required>          
+            <input type="text" class="form-control is-invalid" id="validationServer02" placeholder="" required>          
             <div class="invalid-feedback">
               Correo eletrónico inválido.
             </div>
@@ -55,7 +73,7 @@
         <div class="form-row" style="padding-top: 12px">          
           <div class="col">
             <label for="validationServer05">Contraseña</label>
-            <input type="text" class="form-control is-invalid" id="validationServer02" placeholder="Contraseña" required>          
+            <input type="text" class="form-control is-invalid" id="validationServer02" placeholder="" required>          
             <div class="invalid-feedback">
               Algunos caracteres son inválidos.
             </div>
