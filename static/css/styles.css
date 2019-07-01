@@ -1,0 +1,133 @@
+.navbarStyle{
+    box-shadow: 0 0 2px #cfcfcf, 0 0 3px #cacaca;    
+    /*background-color: rgb(255, 249, 224)*/
+}
+
+.banner{
+    background: url(../images/banner.jpg);
+    height: 60vh;
+    background-position: center;
+    background-size: cover 
+}
+
+*{
+	margin: 0;
+	padding: 0;
+
+	/*Barra social*/
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;	
+}
+
+/*-------------------------Barra social-------------------------*/
+
+.social{
+	position: fixed;
+	left: 0;	
+	top: 300px;	
+	z-index: 2000;
+	
+	/*left: 0;	
+	margin-top: 150px;	
+	z-index: 2000;
+	position: absolute;*/
+}
+/*
+.sticky-top2 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 150px;
+  z-index: 1030;
+}
+*/
+.social ul{
+	list-style: none;
+}
+
+.social ul li a{
+	display: inline-block;
+	color: #fff;
+	background: #000;
+	padding: 10px 15px;
+	text-decoration: none;
+	-webkit-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+
+.social ul li .icon-facebook{
+	background: #3b5998;
+}
+
+.social ul li .icon-twitter{
+	background: #00abf0;
+}
+
+.social ul li .icon-instagram{
+	background: #f33f17;
+}
+
+.social ul li a:hover{
+	padding: 10px 30px;
+}
+/*--------------------------------------------------------------*/
+
+/*-------------------------Formularios de registro--------------*/
+
+.formularios{
+	background-color: rgb(248, 249, 250);
+	padding: 20px;
+	border-radius: 20px;
+	box-shadow: 0 0 3px #cfcfcf, 0 0 4px #cacaca
+}
+/*--------------------------------------------------------------*/
+
+/*-------------------------Botones outline purpura--------------*/
+.btn-outline-purple{
+	color: #563d7c;
+	border-color: #563d7c
+}
+
+.btn-outline-purple:hover{
+	background: #563d7c;
+	color: rgb(247, 247, 247);
+	border-color: rgb(247, 247, 247);
+}
+/*--------------------------------------------------------------*/
+
+/*-------------------------Botones outline purpura--------------*/
+.cardShadow{
+	box-shadow: 0 0 10px #cfcfcf62, 0 0 10px #cacaca60
+}
+/*--------------------------------------------------------------*/
+
+.precioDescuento{
+	color: rgb(29, 177, 29);
+	font-size: 18px
+}
+
+.precioAntDescuento{
+	color: #858585;
+	text-decoration: line-through
+}
+
+.colorFranjas1{
+	/*background-color: rgb(241, 253, 212);*/
+	/*background-color: rgb(252, 236, 211);*/
+	background-color: rgb(255, 247, 238);
+	padding-top: 20px
+}
+
+.colorFranjas2{
+	/*background-color: rgb(211, 233, 252);*/
+	/*background-color: rgb(240, 248, 255);*/
+	background-color: rgb(240, 224, 247);
+	padding-top: 20px
+}
+
+.botonEditar{
+	position: absolute;
+	border-color: transparent;	
+	font-size: 20px
+}
