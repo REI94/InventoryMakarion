@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!doctype html>
 <html lang="es">
   <head>
@@ -7,8 +8,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts.css' %}">
 
     <title>Registro</title>
   </head>
@@ -38,7 +39,7 @@
               <option>P</option>
               <option>J</option>
               <option>G</option>
-              <option>R - Firma personal</option>
+              <option>R</option>
             </select>
           </div>            
           <div class="form-group col-md-9">           
