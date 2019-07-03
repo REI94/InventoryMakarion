@@ -48,5 +48,5 @@ class Modelo(models.Model):
 class Carrito(models.Model):
 
     cliente_asociado = models.OneToOneField(Cliente, on_delete = models.CASCADE)
-    cant_productos = models.IntegerField('Productos en el carrito', blank = False, null = False)
+    cant_productos = models.IntegerField('Productos en el carrito', blank = False, null = False, default = 0)
     producto_en_carrito = models.ManyToManyField(Producto, blank = True)
