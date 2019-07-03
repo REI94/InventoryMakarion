@@ -1,4 +1,5 @@
 from django.db import models
+from annoying.fields import AutoOneToOneField
 
 # Create your models here.
 class Cliente(models.Model):
@@ -47,6 +48,7 @@ class Modelo(models.Model):
 
 class Carrito(models.Model):
 
-    cliente_asociado = models.OneToOneField(Cliente, on_delete = models.CASCADE)
-    cant_productos = models.IntegerField('Productos en el carrito', blank = False, null = False)
+    #cliente_asociado = models.OneToOneField(Cliente, on_delete = models.CASCADE)
+    cliente_asociado = AutoOneToOneField(Cliente, on_delete = models.CASCADE, primary_key=True)
+    cant_productos = models.IntegerField('Productos en el carrito', blank = False, null = False, default = 0)
     producto_en_carrito = models.ManyToManyField(Producto, blank = True)
