@@ -10,4 +10,4 @@ class Administrador(Persona):
 	sueldo = models.FloatField()
 	
 	def __str__(self):
-		return self.cedula
+		return self.num_documento_id
