@@ -1,8 +1,19 @@
-from django import forms
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
 
 from .models import Cliente, Persona
 
-class ClienteForm(forms.ModelForm):
+class ClienteForm(UserCreationForm):
     class Meta:
-        model = Cliente
-        fields = ['nombre','apellido','tipo_documento_id','documento_id','edad','telefono','direccion','email','contrasenia']
+        model = User
+        fields = [
+            'username',
+            'first_name',
+            'last_name',                       
+        ]
+        labels = {
+            'username': 'Nombre de usuario',
+            'first_name': 'Nombre',
+            'last_name': 'Apellido',
+            'email': 'Correo electrónico',
+        }

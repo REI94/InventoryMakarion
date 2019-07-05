@@ -9,6 +9,7 @@ from apps.producto.models import Producto
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic import CreateView
+#from django.urls import reverse_lazy
 from django.urls import reverse_lazy
 
 
@@ -38,9 +39,9 @@ def index(request):
 	
 class RegistroUsuario(CreateView):
 	model = User
-	template_name = "cliente/registro.html"
-	form_class = UserCreationForm
-	success_url = reverse_lazy('cliente:index')
+	template_name = "cliente/form.html"
+	form_class = ClienteForm
+	success_url = reverse_lazy('index')
 
 	
 def crearCliente(request):

@@ -27,17 +27,17 @@
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="validationServer01">Nombre</label>
-            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="" name="nombre" required>          
+            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="" name="first_name" required>          
           </div>                        
           <div class="form-group col-md-6">
             <label for="validationServer02">Apellido</label>
-            <input type="text" class="form-control is-valid" id="validationServer02" placeholder="" name="apellido" required>          
+            <input type="text" class="form-control is-valid" id="validationServer02" placeholder="" name="last_name" required>          
           </div>                
         </div>
         <div class="form-row">
           <label for="validationServer03" style="padding-left: 5px">Documento de identidad</label>
         </div>          
-        <div class="form-row">
+        <!--<div class="form-row">
           <div class="form-group col-md-3">             
             <select id="inputState" class="form-control" name="tipo_documento_id">
               <option selected>V</option>
@@ -51,27 +51,27 @@
           <div class="form-group col-md-9">           
             <input type="text" class="form-control is-invalid" id="validationServer02" placeholder="" name="documento_id" required>          
           </div>                
-        </div>
+        </div>-->
         <div class="form-row">
           <div class="form-group col-md-3">
             <label for="validationServer02">Edad</label>             
-            <input type="text" class="form-control is-invalid" id="validationServer02" placeholder="" name="edad" required>
+            <!--<input type="text" class="form-control is-invalid" id="validationServer02" placeholder="" name="edad" required>-->
           </div>            
           <div class="form-group col-md-9">
             <label for="validationServer02">Teléfono</label>           
-            <input type="text" class="form-control is-invalid" id="validationServer02" placeholder="" name="telefono" required>          
+            <!--<input type="text" class="form-control is-invalid" id="validationServer02" placeholder="" name="telefono" required>-->          
           </div>                
         </div>
         <div class="form-row">
             <div class="col">
               <label for="validationServer01">Dirección</label>
-              <input type="text" class="form-control is-valid" id="validationServer01" placeholder="" name="direccion" required>          
+              <!--<input type="text" class="form-control is-valid" id="validationServer01" placeholder="" name="direccion" required>-->          
             </div>                  
           </div>
         <div class="form-row" style="padding-top: 12px">
           <div class="col">
             <label for="validationServer04">Correo electrónico</label>
-            <input type="text" class="form-control is-invalid" id="validationServer02" placeholder="" name="email" required>          
+            <input type="text" class="form-control is-invalid" id="validationServer02" placeholder="" name="username" required>          
             <div class="invalid-feedback">
               Correo eletrónico inválido.
             </div>
@@ -80,7 +80,19 @@
         <div class="form-row" style="padding-top: 12px">          
           <div class="col">
             <label for="validationServer05">Contraseña</label>
-            <input type="text" class="form-control is-invalid" id="validationServer02" placeholder="" name="contrasenia" required>          
+            <input type="text" class="form-control is-invalid" id="validationServer02" placeholder="" name="password1" required>          
+            <div class="invalid-feedback">
+              Su contraseña no puede asemejarse tanto a su otra información personal.
+              Su contraseña debe contener por lo menos 8 caracteres.
+              La contraseña no puede ser una contraseña de uso común.
+              Su contraseña no puede ser completamente numérica.
+            </div>
+          </div>        
+        </div>
+        <div class="form-row" style="padding-top: 12px">          
+          <div class="col">
+            <label for="validationServer05">Repetir contraseña</label>
+            <input type="text" class="form-control is-invalid" id="validationServer02" placeholder="" name="password2" required>          
             <div class="invalid-feedback">
               Algunos caracteres son inválidos.
             </div>

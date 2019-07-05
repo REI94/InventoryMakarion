@@ -6,8 +6,8 @@ from .views import crearCliente, index, RegistroUsuario
 urlpatterns = [
     #path('crear_cliente/',crearCliente, name = 'crear_cliente'),
     path('', index, name='index'),
-    path('registrar', RegistroUsuario.as_view(), name = 'registrar'),
-    path('registro/', crearCliente, name = 'registro')
+    #path('registrar', RegistroUsuario.as_view(), name = 'registrar'),
+    path('registro/', RegistroUsuario.as_view(), name = 'registro')
 ]
 
 
