@@ -21,15 +21,42 @@
 {%block contenido%}
 <div class="container" style="padding-top: 20px; padding-bottom: 20px">  
   <div class="row align-items-center">
-    <div class="col-md-6">
+    <div class="col-md-2">
+      <ul class="list-unstyled">
+        <li class="media" style="height: 90px; width: 90px; padding: 0%">
+          <div class="divImgGallery" style="position: relative">                
+            <a href="{{producto.imagen.url}}" data-lightbox="galeria" data-title="{{producto.nombre}}"><figure class="borderImgGallery"><img src="{{producto.imagen.url}}" class="mr-3 galleryImg" style="height: 100%; width: 100%" alt="..."><i class="icon icon-search zoomImg" style="font-size: 1.6em; left: 41%; top: 38%"></i></figure></a>
+          </div>
+        </li>
+        <li class="media" style="height: 90px; width: 90px; padding: 0%">
+          <div class="divImgGallery" style="position: relative">                
+            <a href="{{producto.imagen.url}}" data-lightbox="galeria" data-title="{{producto.nombre}}"><figure class="borderImgGallery"><img src="{{producto.imagen.url}}" class="mr-3 galleryImg" style="height: 100%; width: 100%" alt="..."><i class="icon icon-search zoomImg" style="font-size: 1.6em; left: 41%; top: 38%"></i></figure></a>
+          </div>
+        </li>
+        <li class="media" style="height: 90px; width: 90px; padding: 0%">
+          <div class="divImgGallery" style="position: relative">                
+            <a href="{{producto.imagen.url}}" data-lightbox="galeria" data-title="{{producto.nombre}}"><figure class="borderImgGallery"><img src="{{producto.imagen.url}}" class="mr-3 galleryImg" style="height: 100%; width: 100%" alt="..."><i class="icon icon-search zoomImg" style="font-size: 1.6em; left: 41%; top: 38%"></i></figure></a>
+          </div>
+        </li>
+        <li class="media" style="height: 90px; width: 90px; padding: 0%">
+          <div class="divImgGallery" style="position: relative">                
+            <a href="{{producto.imagen.url}}" data-lightbox="galeria" data-title="{{producto.nombre}}"><figure class="borderImgGallery"><img src="{{producto.imagen.url}}" class="mr-3 galleryImg" style="height: 100%; width: 100%" alt="..."><i class="icon icon-search zoomImg" style="font-size: 1.6em; left: 41%; top: 38%"></i></figure></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-5" style="padding-left: 0px">
       <div class="divImgGallery" style="position: relative">
         <a href="{{producto.imagen.url}}" data-lightbox="galeria" data-title="{{producto.nombre}}"><figure class="borderImgGallery"><img src="{{producto.imagen.url}}" class="galleryImg"><i class="icon icon-search zoomImg"></i></figure></a>      
       </div>
     </div>   
-    <div class="col-md-6 card" style="width: 18rem;">
+    <div class="col-md-5 card" style="width: 18rem;">
+        <div class="card-header" style="background: white">
+            <h2 class="card-subtitle mb-2 text-muted" style="font-size: 17px; text-align: end; margin-top: 1.5%">Código: {{ producto.codigo }}</h2>
+        </div>
         <div class="card-body" style="padding-bottom: 0%">
           <h1 class="card-title" style="font-size: 27px"><strong>{{producto.nombre}}</strong></h1>
-          <h2 class="card-subtitle mb-2 text-muted" style="font-size: 17px">14 vendidos</h2>
+          <h2 class="card-subtitle mb-2 text-muted" style="font-size: 17px">14 vendidos</h2>          
         </div>
         <div class="card-body" style="padding-bottom: 0%">
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -62,21 +89,16 @@
         </div>
       </div>
     </div>    
-</div>
-     
+</div>     
 
-
-
-
-
-
+<!--Descripción del producto-->
 <div class="container-fluid" style="background-color: rgb(240, 224, 247); padding-bottom: 50px">
     <div class="container" style="padding-top: 20px">      
       <div class="row align-items-center">        
         <div class="col-md-12">
           <h2><strong>Descripción</strong></h2>
-          <p>{{ producto.descripcion }} Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptatem molestias laudantium! Unde in nulla beatae consequuntur ducimus, cupiditate quibusdam magni qui delectus. Quia eum sint dicta aut ratione totam.</p>
-          <p><strong>Codigo:</strong> {{ producto.codigo }}</p>  
+          <p>{{ producto.descripcion }} Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit in iusto quos maiores optio similique explicabo quasi nesciunt possimus, soluta, laboriosam commodi temporibus sequi sunt laborum velit? Amet iure provident odit tenetur, nihil quos voluptatum culpa exercitationem quis. A nesciunt excepturi, impedit quidem aut quae molestiae velit deserunt modi placeat sed saepe tempora! Quo, recusandae? Odio ducimus, repellendus sit magnam quibusdam consequatur aut totam aliquam dolor dicta iste at quia, accusantium voluptates tempore accusamus voluptate sapiente vitae ab facere. Aliquid, sit fuga! Corrupti ut modi amet eos officiis, a consectetur pariatur porro rerum doloremque itaque, temporibus sequi quidem impedit ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptatem molestias laudantium! Unde in nulla beatae consequuntur ducimus, cupiditate quibusdam magni qui delectus. Quia eum sint dicta aut ratione totam.</p>
+          <p>{{ producto.descripcion }} Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit in iusto quos maiores optio similique explicabo quasi nesciunt possimus, soluta, laboriosam commodi temporibus sequi sunt laborum velit? Amet iure provident odit tenetur, nihil quos voluptatum culpa exercitationem quis. A nesciunt excepturi, impedit quidem aut quae molestiae velit deserunt modi placeat sed saepe tempora! Quo, recusandae? Odio ducimus, repellendus sit magnam quibusdam consequatur aut totam aliquam dolor dicta iste at quia, accusantium voluptates tempore accusamus voluptate sapiente vitae ab facere. Aliquid, sit fuga! Corrupti ut modi amet eos officiis, a consectetur pariatur porro rerum doloremque itaque, temporibus sequi quidem impedit ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptatem molestias laudantium! Unde in nulla beatae consequuntur ducimus, cupiditate quibusdam magni qui delectus. Quia eum sint dicta aut ratione totam.</p>  
         </div>
       </div>
     </div>
