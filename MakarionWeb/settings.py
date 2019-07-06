@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'MakarionWebPrueba',
         'USER': 'postgres',
-        'PASSWORD': 'joserei02',
+        'PASSWORD': '23721718',
         'HOST': 'localhost',
         'PORT': 5432,
     }
