@@ -1,40 +1,98 @@
 {% extends 'base/base.html'%}
 {% load staticfiles %}
+
+{% block head %}
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+    <link rel="stylesheet" href="{% static 'fonts.css'%}">
+    <link href="{% static 'css/lightbox.css'%}" rel="stylesheet">
+    <script src="jquery.js"></script>
+
+    <title>{% block titulo %}{{producto.nombre}}{% endblock %}</title>
+  </head>
+{% endblock %}
+
 {%block contenido%}
-<h2>Detalle Producto</h2>
+<div class="container" style="padding-top: 20px; padding-bottom: 20px">  
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <div class="divImgGallery" style="position: relative">
+        <a href="{{producto.imagen.url}}" data-lightbox="galeria" data-title="{{producto.nombre}}"><figure class="borderImgGallery"><img src="{{producto.imagen.url}}" class="galleryImg"><i class="icon icon-search zoomImg"></i></figure></a>      
+      </div>
+    </div>   
+    <div class="col-md-6 card" style="width: 18rem;">
+        <div class="card-body" style="padding-bottom: 0%">
+          <h1 class="card-title" style="font-size: 27px"><strong>{{producto.nombre}}</strong></h1>
+          <h2 class="card-subtitle mb-2 text-muted" style="font-size: 17px">14 vendidos</h2>
+        </div>
+        <div class="card-body" style="padding-bottom: 0%">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <ul style="margin-left: 30px">
+            <li>Tela impermeable</li>
+            <li>Fácil de lavar</li>
+            <li>No decolora facilmente</li>
+            <li>Muy espacioso por dentro</li>
+          </ul>
+        </div>
+        <div class="card-body" style="padding-bottom: 0%">  
+          <h4 class="card-subtitle mb-2 precioDescuento" style="font-size: 23px">Bs.S 70.000</h4>
+          <h5 class="card-subtitle mb-3 precioAntDescuento">Bs.S {{producto.precio}}</h5>
+          <p style="font-size: 20px"><strong>Cantidad disponible:</strong> {{ producto.cantidad }}</p>
+        </div>
+        <div class="card-body">
+          <div class="container-fluid">
+            <div class="row">               
+              <div class="col-md-3 align-self-center border bg-light" style="padding: 0px; background-color: rgb(247, 247, 247); font-size: 20px">
+                <input type="number" class="form-control" id="inputCantProducto" aria-describedby="cantidadProducto" placeholder="0" style="border-radius: 0px">
+              </div>                
+              <div class="col-md-5 border bg-light" style="background-color: rgb(247, 247, 247); padding: 0px; margin-right: 0px">                  
+                <button type="button" class="btn btn-success btn-block" style="border-radius: 0px">Añadir al<span class="icon icon-cart" style="font-size: 20px; padding-left: 7px"></span></button>
+              </div>
+              <div class="col-md-4 border bg-light" style="background-color: rgb(247, 247, 247); padding: 0px; margin-right: 0px">                  
+                  <button type="button" class="btn btn-warning btn-block" style="border-radius: 0px">Comprar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
+</div>
+     
 
 
 
 
-<div class="card cardShadow">
-    <!--<img src="{% static 'images/bolso1-lg.jpg' %}" class="card-img-top" alt="...">-->
-<img src="{{producto.imagen.url}}" class="card-img-top" alt="...">
-    <div class="card-body" style="padding-bottom: 0px">                        
-      <h6 class="card-subtitle mb-2 precioDescuento">Bs.S 25.000</h6>
-      <h7 class="card-subtitle mb-3 precioAntDescuento">Bs.S {{producto.precio}}</h7>            
-    </div>
-    <div class="container-fluid">
-      <div class="row">               
-        <div class="col-md-5 align-self-center border bg-light" style="padding: 0px; background-color: rgb(247, 247, 247); font-size: 20px">
-          <input type="number" class="form-control" id="inputCantProducto" aria-describedby="cantidadProducto" placeholder="0" style="border-radius: 0px">
-        </div>                
-        <div class="col-md-7 border bg-light" style="background-color: rgb(247, 247, 247); padding: 0px; margin-right: 0px">                  
-          <button type="button" class="btn btn-success btn-block" style="border-radius: 0px">Añadir al<span class="icon icon-cart" style="font-size: 20px; padding-left: 7px"></span></button>
+
+
+<div class="container-fluid" style="background-color: rgb(240, 224, 247); padding-bottom: 50px">
+    <div class="container" style="padding-top: 20px">      
+      <div class="row align-items-center">        
+        <div class="col-md-12">
+          <h2><strong>Descripción</strong></h2>
+          <p>{{ producto.descripcion }} Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptatem molestias laudantium! Unde in nulla beatae consequuntur ducimus, cupiditate quibusdam magni qui delectus. Quia eum sint dicta aut ratione totam.</p>
+          <p><strong>Codigo:</strong> {{ producto.codigo }}</p>  
         </div>
       </div>
     </div>
-  </div>
+</div>
 
+  
+  
+   
 
+{%endblock%}
 
-
-
-
-
-  <p><strong>Codigo:</strong> {{ producto.codigo }}</p>
-  <p><strong>Nombre:</strong> {{ producto.nombre }}</p>
-  <p><strong>Precio:</strong> <a href="">{{ producto.precio }}</a></p> <!-- author detail link not yet defined -->
-  <p><strong>Descripcion:</strong> {{ producto.descripcion }}</p>
-  <p><strong>Cantidad disponible:</strong> {{ producto.cantidad }}</p> 
-
+{%block js%}
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="{% static 'js/lightbox-plus-jquery.js'%}"></script>
 {%endblock%}
