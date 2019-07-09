@@ -13,7 +13,7 @@
             <!--<img src="{% static 'images/bolso1-lg.jpg' %}" class="card-img-top" alt="...">-->
       <img src="{{producto.imagen.url}}" class="card-img-top" alt="...">
             <div class="card-body" style="padding-bottom: 0px">                        
-              <h6 class="card-subtitle mb-2 precioDescuento">Bs.S 25.000</h6>
+              <h6 class="card-subtitle mb-2 precioDescuento">Bs.S {{producto.precio_en_descuento}}</h6>
               <h7 class="card-subtitle mb-3 precioAntDescuento">Bs.S {{producto.precio}}</h7>            
             </div>
             <div class="card-body text-right">

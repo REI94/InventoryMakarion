@@ -56,23 +56,26 @@
         </div>
         <div class="card-body" style="padding-bottom: 0%">
           <h1 class="card-title" style="font-size: 27px"><strong>{{producto.nombre}}</strong></h1>
-          <h2 class="card-subtitle mb-2 text-muted" style="font-size: 17px">14 vendidos</h2>          
+          <h2 class="card-subtitle mb-2 text-muted" style="font-size: 17px">{{producto.unidades_vendidas}} vendidos</h2>          
         </div>
         <div class="card-body" style="padding-bottom: 0%">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <ul style="margin-left: 30px">
-            <li>Tela impermeable</li>
+          <p class="card-text">{{producto.texto_destacado}}</p>
+          {%if producto.caracteristica_destacada%}
+          <ul style="margin-left: 30px">            
+            <li>{{producto.caracteristica_destacada}}</li>
             <li>Fácil de lavar</li>
             <li>No decolora facilmente</li>
             <li>Muy espacioso por dentro</li>
           </ul>
+          {%endif%}
         </div>
         <div class="card-body" style="padding-bottom: 0%">  
-          <h4 class="card-subtitle mb-2 precioDescuento" style="font-size: 23px">Bs.S 70.000</h4>
+          <h4 class="card-subtitle mb-2 precioDescuento" style="font-size: 23px">Bs.S {{producto.precio_en_descuento}}</h4>
           <h5 class="card-subtitle mb-3 precioAntDescuento">Bs.S {{producto.precio}}</h5>
           <p style="font-size: 20px"><strong>Cantidad disponible:</strong> {{ producto.cantidad }}</p>
         </div>
         <div class="card-body">
+          {% if producto.disponible %}
           <div class="container-fluid">
             <div class="row">               
               <div class="col-md-3 align-self-center border bg-light" style="padding: 0px; background-color: rgb(247, 247, 247); font-size: 20px">
@@ -86,6 +89,11 @@
               </div>
             </div>
           </div>
+          {% else %}
+          <div class="card-footer" style="background: white">
+            <p style="font-size: 20px"><strong>Producto no disponible.</strong></p>
+          </div>          
+          {% endif %}
         </div>
       </div>
     </div>    
