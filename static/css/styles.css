@@ -1,6 +1,5 @@
 .navbarStyle{
     box-shadow: 0 0 2px #cfcfcf, 0 0 3px #cacaca;    
-    /*background-color: rgb(255, 249, 224)*/
 }
 
 .banner{
@@ -24,23 +23,10 @@
 
 .social{
 	position: fixed;
-	left: 0;	
-	top: 300px;	
+	left: 0;		
 	z-index: 2000;
-	
-	/*left: 0;	
-	margin-top: 150px;	
-	z-index: 2000;
-	position: absolute;*/
 }
-/*
-.sticky-top2 {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 150px;
-  z-index: 1030;
-}
-*/
+
 .social ul{
 	list-style: none;
 }
@@ -113,17 +99,17 @@
 }
 
 .colorFranjas1{
-	/*background-color: rgb(241, 253, 212);*/
-	/*background-color: rgb(252, 236, 211);*/
 	background-color: rgb(255, 247, 238);
 	padding-top: 20px
 }
 
 .colorFranjas2{
-	/*background-color: rgb(211, 233, 252);*/
-	/*background-color: rgb(240, 248, 255);*/
 	background-color: rgb(240, 224, 247);
 	padding-top: 20px
+}
+
+.colorFranjasLight{
+	background-color: rgb(248, 249, 250);
 }
 
 .botonEditar{
@@ -137,11 +123,6 @@
 img.galleryImg{
 	height: 400px;
 	width: 400px;
-	/*display: block;
-	max-width: 100%;
-	height: 250px;
-	width: 250px;*/
-	/*margin: 10px;*/
 }
 
 .textGallery{
@@ -208,3 +189,12 @@ div.onDivNews:hover img.glowShadow{
 	color: black;
 }
 /*--------------------------------------------------------------*/
+.resaltarTexto{
+	font-size: 25px;
+	color: rgb(19, 19, 19)
+}
+
+.resaltarTexto:hover{
+	color: #9a38a3;
+	text-decoration: none
+}

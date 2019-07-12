@@ -1,0 +1,30 @@
+{% extends 'base/base.html'%}
+{% load staticfiles %}
+{%block contenido%}
+<!--{% load crispy_forms_tags %}-->
+
+<!--<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ingresar Producto</title>
+</head>
+<body>-->
+<body style="background-color: rgb(240, 224, 247)">
+    <h1 style="padding-top: 20px; padding-bottom: 10px; text-align: center">Ingresar Producto</h1>
+    <div class="container col-md-5 formularios" style="margin-bottom: 9%">
+        <!--<form method="POST">-->
+        <form action= "" method="psot" enctype="multipart/form-data">
+            {% csrf_token %} 
+            <!--{{ form.as_p }}-->
+            {{form|crispy}}
+            <button type="submit">Ingresar</button>
+        </form>
+    </div>
+</body>
+<!--</body>
+</html>-->
+
+{%endblock%}

@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+{% extends 'base/base.html'%}
+{% load staticfiles %}
+{%block contenido%}
+<!--{% load crispy_forms_tags %}-->
+
+<!--<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -6,11 +11,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ingresar Producto</title>
 </head>
-<body>
-    <form method="POST">
-        {% csrf_token %} 
-        {{ form.as_p }}
-        <button type="submit">Ingresar</button>
-    </form>
+<body>-->
+<body style="background-color: rgb(240, 224, 247)">
+    <h1 style="padding-top: 20px; padding-bottom: 10px; text-align: center">Ingresar Producto</h1>
+    <div class="container col-md-5 formularios" style="margin-bottom: 9%">
+        <!--<form method="POST">-->
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %} 
+            <!--{{ form.as_p }}-->
+            {{form|crispy}}
+            <button type="submit">Ingresar</button>
+        </form>
+    </div>
 </body>
-</html>
+<!--</body>
+</html>-->
+
+{%endblock%}

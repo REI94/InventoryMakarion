@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 from apps.producto.models import Producto
 # Create your models here.
 

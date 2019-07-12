@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'w!&)q0#rxm8df+yy5hiubxao&=mahu88g!9#1dog(cvwowaorj'
+SECRET_KEY = '^pf*fwz__m#ol8*pgqfhe!80_zk4zx6sgrrgxm7^l4qu9#-lm0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,12 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.administrador',
+    'crispy_forms',
     'apps.carrito',
-    'apps.cliente',
     'apps.compra',
     'apps.producto',
+    'apps.users',
 ]
+AUTH_USER_MODEL = 'users.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -81,9 +82,9 @@ WSGI_APPLICATION = 'MakarionWeb.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'MakarionWebPrueba',
+        'NAME': 'MakarionWeb1111',
         'USER': 'postgres',
-        'PASSWORD': '23721718',
+        'PASSWORD': 'joserei02',
         'HOST': 'localhost',
         'PORT': 5432,
     }
@@ -133,6 +134,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
-#User's redirection after succefully login
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL = 'index'
+LOGOUT_REDIRECT_URL = 'index'

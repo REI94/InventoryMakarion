@@ -1,27 +1,36 @@
 from django.shortcuts import render, redirect
 
+# Create your views here.
 from .forms import ProductoForm
 
 #Para importar una vista de clase
 from django.views import generic
 
 from .models import Producto
+##
+from django.views.generic.edit import CreateView
+from django.urls import reverse_lazy
 
 # Create your views here.
 def Indexproducto(request):
     return render(request, 'producto/producto.html')
 
+class ProductoCreate(CreateView):
+    model = Producto
+    fields = '__all__'
+    #success_url = reverse_lazy('index')
 
-def crearProducto(request):
-    if request.method == 'POST':
-        form = ProductoForm(request.POST)
-        if form.is_valid():
-            form.save()
-        return redirect('index')
 
-    else:
-        form = ProductoForm()
-    return render(request, 'producto/ingresar_producto.html', {'form':form})
+#def ProductoCreate(request):
+#    if request.method == 'POST':
+#        form = ProductoForm(request.POST)
+#        if form.is_valid():
+#            form.save()
+#        return redirect('index')
+
+#    else:
+#        form = ProductoForm()
+#    return render(request, 'producto/ingresar_producto.html', {'form':form})
 
 class BolsosListView(generic.ListView):
     model = Producto

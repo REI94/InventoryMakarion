@@ -23,28 +23,37 @@
   <div class="row align-items-center">
     <div class="col-md-2">
       <ul class="list-unstyled">
+        {%if producto.imagen_2%}
         <li class="media" style="height: 90px; width: 90px; padding: 0%">
           <div class="divImgGallery" style="position: relative">                
-            <a href="{{producto.imagen.url}}" data-lightbox="galeria" data-title="{{producto.nombre}}"><figure class="borderImgGallery"><img src="{{producto.imagen.url}}" class="mr-3 galleryImg" style="height: 100%; width: 100%" alt="..."><i class="icon icon-search zoomImg" style="font-size: 1.6em; left: 41%; top: 38%"></i></figure></a>
+            <a href="{{producto.imagen_2.url}}" data-lightbox="galeria" data-title="{{producto.nombre}}"><figure class="borderImgGallery"><img src="{{producto.imagen_2.url}}" class="mr-3 galleryImg" style="height: 100%; width: 100%" alt="..."><i class="icon icon-search zoomImg" style="font-size: 1.6em; left: 41%; top: 38%"></i></figure></a>
           </div>
         </li>
+        {%endif%}
+        {%if producto.imagen_3%}
         <li class="media" style="height: 90px; width: 90px; padding: 0%">
           <div class="divImgGallery" style="position: relative">                
-            <a href="{{producto.imagen.url}}" data-lightbox="galeria" data-title="{{producto.nombre}}"><figure class="borderImgGallery"><img src="{{producto.imagen.url}}" class="mr-3 galleryImg" style="height: 100%; width: 100%" alt="..."><i class="icon icon-search zoomImg" style="font-size: 1.6em; left: 41%; top: 38%"></i></figure></a>
+            <a href="{{producto.imagen_3.url}}" data-lightbox="galeria" data-title="{{producto.nombre}}"><figure class="borderImgGallery"><img src="{{producto.imagen_3.url}}" class="mr-3 galleryImg" style="height: 100%; width: 100%" alt="..."><i class="icon icon-search zoomImg" style="font-size: 1.6em; left: 41%; top: 38%"></i></figure></a>
           </div>
         </li>
+        {%endif%}
+        {%if producto.imagen_4%}
         <li class="media" style="height: 90px; width: 90px; padding: 0%">
           <div class="divImgGallery" style="position: relative">                
-            <a href="{{producto.imagen.url}}" data-lightbox="galeria" data-title="{{producto.nombre}}"><figure class="borderImgGallery"><img src="{{producto.imagen.url}}" class="mr-3 galleryImg" style="height: 100%; width: 100%" alt="..."><i class="icon icon-search zoomImg" style="font-size: 1.6em; left: 41%; top: 38%"></i></figure></a>
+            <a href="{{producto.imagen_4.url}}" data-lightbox="galeria" data-title="{{producto.nombre}}"><figure class="borderImgGallery"><img src="{{producto.imagen_4.url}}" class="mr-3 galleryImg" style="height: 100%; width: 100%" alt="..."><i class="icon icon-search zoomImg" style="font-size: 1.6em; left: 41%; top: 38%"></i></figure></a>
           </div>
         </li>
+        {%endif%}
+        {%if producto.imagen_5%}
         <li class="media" style="height: 90px; width: 90px; padding: 0%">
           <div class="divImgGallery" style="position: relative">                
-            <a href="{{producto.imagen.url}}" data-lightbox="galeria" data-title="{{producto.nombre}}"><figure class="borderImgGallery"><img src="{{producto.imagen.url}}" class="mr-3 galleryImg" style="height: 100%; width: 100%" alt="..."><i class="icon icon-search zoomImg" style="font-size: 1.6em; left: 41%; top: 38%"></i></figure></a>
+            <a href="{{producto.imagen_5.url}}" data-lightbox="galeria" data-title="{{producto.nombre}}"><figure class="borderImgGallery"><img src="{{producto.imagen_5.url}}" class="mr-3 galleryImg" style="height: 100%; width: 100%" alt="..."><i class="icon icon-search zoomImg" style="font-size: 1.6em; left: 41%; top: 38%"></i></figure></a>
           </div>
         </li>
+        {%endif%}
       </ul>
     </div>
+    <!--Imágen principal-->
     <div class="col-md-5" style="padding-left: 0px">
       <div class="divImgGallery" style="position: relative">
         <a href="{{producto.imagen.url}}" data-lightbox="galeria" data-title="{{producto.nombre}}"><figure class="borderImgGallery"><img src="{{producto.imagen.url}}" class="galleryImg"><i class="icon icon-search zoomImg"></i></figure></a>      
@@ -56,23 +65,35 @@
         </div>
         <div class="card-body" style="padding-bottom: 0%">
           <h1 class="card-title" style="font-size: 27px"><strong>{{producto.nombre}}</strong></h1>
-          <h2 class="card-subtitle mb-2 text-muted" style="font-size: 17px">14 vendidos</h2>          
+          <h2 class="card-subtitle mb-2 text-muted" style="font-size: 17px">{{producto.unidades_vendidas}} vendidos</h2>          
         </div>
         <div class="card-body" style="padding-bottom: 0%">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <ul style="margin-left: 30px">
-            <li>Tela impermeable</li>
-            <li>Fácil de lavar</li>
-            <li>No decolora facilmente</li>
-            <li>Muy espacioso por dentro</li>
-          </ul>
+          <p class="card-text">{{producto.texto_destacado}}</p>          
+          <ul style="margin-left: 30px">   
+            {%if producto.caracteristica_destacada%}         
+            <li>{{producto.caracteristica_destacada}}</li>
+            {%endif%}
+            {%if producto.caracteristica_destacada_2%}
+            <li>{{producto.caracteristica_destacada_2}}</li>
+            {%endif%}
+            {%if producto.caracteristica_destacada_3%}
+            <li>{{producto.caracteristica_destacada_3}}</li>
+            {%endif%}
+            {%if producto.caracteristica_destacada_4%}
+            <li>{{producto.caracteristica_destacada_4}}</li>
+            {%endif%}
+            {%if producto.caracteristica_destacada_5%}
+            <li>{{producto.caracteristica_destacada_5}}</li>
+            {%endif%}
+          </ul>          
         </div>
         <div class="card-body" style="padding-bottom: 0%">  
-          <h4 class="card-subtitle mb-2 precioDescuento" style="font-size: 23px">Bs.S 70.000</h4>
+          <h4 class="card-subtitle mb-2 precioDescuento" style="font-size: 23px">Bs.S {{producto.precio_en_descuento}}</h4>
           <h5 class="card-subtitle mb-3 precioAntDescuento">Bs.S {{producto.precio}}</h5>
           <p style="font-size: 20px"><strong>Cantidad disponible:</strong> {{ producto.cantidad }}</p>
         </div>
         <div class="card-body">
+          {% if producto.disponible %}
           <div class="container-fluid">
             <div class="row">               
               <div class="col-md-3 align-self-center border bg-light" style="padding: 0px; background-color: rgb(247, 247, 247); font-size: 20px">
@@ -86,6 +107,11 @@
               </div>
             </div>
           </div>
+          {% else %}
+          <div class="card-footer" style="background: white">
+            <p style="font-size: 20px"><strong>Producto no disponible.</strong></p>
+          </div>          
+          {% endif %}
         </div>
       </div>
     </div>    
