@@ -22,35 +22,11 @@ from apps.users.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('', include('apps.users.urls')),
     path('', index, name='index'),
     path('users/', include('apps.users.urls')),
     path('users/', include('django.contrib.auth.urls')),    
     path('producto/', include('apps.producto.urls')),
-    #path('cliente/', include(('apps.cliente.urls', 'cliente'))),
-    #path('producto/', include(('apps.producto.urls', 'producto'))),
-    #path('index/',Home, name = 'index'),
 ]
 
-""" """
-# Use include() to add paths from the catalog application 
-
-#urlpatterns += [
-#    path('cliente/', include('apps.cliente.urls', )),
-#    path('producto/', include('apps.producto.urls')),
-    #path('accounts/', include('apps.accounts.urls')),
-#]
-
-#Add URL maps to redirect the base URL to our application
-#from django.views.generic import RedirectView
-#urlpatterns += [
-#    path('', RedirectView.as_view(url='/cliente/', permanent=True)),
-#    path('', RedirectView.as_view(url='/producto/', permanent=True)),
-#]
-
-# Use static() to add url mapping to serve static files during development (only)
-
-#urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-""" """
 if settings.DEBUG:
 	urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

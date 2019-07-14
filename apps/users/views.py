@@ -15,12 +15,9 @@ def index(request):
     print(producto)
 
     producto1 = Producto.objects.filter(categoria__icontains='cartera')
-    #print(producto1)
 
     producto2 = Producto.objects.filter(categoria__icontains='cartuchera')
     return render(request, 'index.html', {'producto':producto, 'producto1':producto1, 'producto2':producto2},)
-
-    #cliente/index.html es el template
 
 class SignUp(CreateView):
     form_class = CustomUserCreationForm
