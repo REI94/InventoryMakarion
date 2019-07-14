@@ -20,7 +20,7 @@ Y usar PostgreSQL como gestor de base de datos, aunque pueden usarse otros gesto
 en el apartado DATABASES (con cualquier base de datos necesita especificar la contraseña en este apartado y si gusta cambiar
 el nombre de la base de datos).
 
-Una vez tenga instalados los programas indicados y configurado el apartado DATABASES, puede ejecutar el proyecto ubicándoce
+Una vez tenga instalados los programas indicados y configurado el apartado DATABASES, puede ejecutar el proyecto ubicándose
 con una terminal en el directorio principal (donde se encuentra el archivo manage.py) y ejecutar el comando:
 
 python manage.py runserver
