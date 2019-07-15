@@ -65,7 +65,7 @@
         </div>
         <div class="card-body" style="padding-bottom: 0%">
           <h1 class="card-title" style="font-size: 27px"><strong>{{producto.nombre}}</strong></h1>
-          <h2 class="card-subtitle mb-2 text-muted" style="font-size: 17px">{{producto.unidades_vendidas}} vendidos</h2>          
+          <h2 class="card-subtitle mb-2 text-muted" style="font-size: 17px">14 vendidos</h2>          
         </div>
         <div class="card-body" style="padding-bottom: 0%">
           <p class="card-text">{{producto.texto_destacado}}</p>          
@@ -87,9 +87,14 @@
             {%endif%}
           </ul>          
         </div>
-        <div class="card-body" style="padding-bottom: 0%">  
+        <div class="card-body" style="padding-bottom: 0%">
+          {% if producto.precio_en_descuento %}  
           <h4 class="card-subtitle mb-2 precioDescuento" style="font-size: 23px">Bs.S {{producto.precio_en_descuento}}</h4>
           <h5 class="card-subtitle mb-3 precioAntDescuento">Bs.S {{producto.precio}}</h5>
+          {% else %}
+          <h4 class="card-subtitle mb-2 precioDescuento" style="font-size: 23px">Bs.S {{producto.precio}}</h4>
+          <h5 class="card-subtitle mb-3 precioAntDescuento invisible">Bs.S {{producto.precio}}</h5>
+          {% endif %}
           <p style="font-size: 20px"><strong>Cantidad disponible:</strong> {{ producto.cantidad }}</p>
         </div>
         <div class="card-body">
@@ -124,6 +129,7 @@
         <div class="col-md-12">
           <h2><strong>Descripción</strong></h2>
           <p>{{ producto.descripcion }}</p>
+         
         </div>
       </div>
     </div>

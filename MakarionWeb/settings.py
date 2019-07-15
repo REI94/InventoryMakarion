@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'MakarionWeb.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'MakarionWeb1111',
+        'NAME': 'MakarionWeb',
         'USER': 'postgres',
         'PASSWORD': 'joserei02',
         'HOST': 'localhost',

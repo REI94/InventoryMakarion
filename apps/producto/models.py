@@ -20,7 +20,6 @@ class Producto(models.Model):
 	descripcion = models.TextField('Descripción', blank = False, null = False)
 	cantidad = models.IntegerField()
 	disponible = models.BooleanField(default=True)
-	unidades_vendidas = models.PositiveIntegerField(default=0)
 	creado_el = models.DateTimeField(auto_now_add=True)
 	actualizado_el = models.DateTimeField(auto_now=True)
 	imagen = models.ImageField('Imágen principal', upload_to="productos", null = True, blank = True)
